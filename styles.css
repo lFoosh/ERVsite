@@ -3,8 +3,8 @@
   --bg: #f7f4ef;
   --text: #1b1b1b;
   --muted: #6d6458;
-  --accent: #c9a06c;
-  --accent-dark: #a67c42;
+  --accent: #0066ff;
+  --accent-dark: #004fcc;
   --white: #ffffff;
   --shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
   --radius: 24px;
@@ -37,9 +37,9 @@ img {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(247, 244, 239, 0.95);
+  background: var(--accent);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
@@ -61,8 +61,8 @@ img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--accent);
-  color: var(--white);
+  background: var(--white);
+  color: var(--accent);
   display: grid;
   place-items: center;
   font-weight: 700;
@@ -71,6 +71,7 @@ img {
 .brand-name {
   font-size: 1.1rem;
   letter-spacing: 0.5px;
+  color: var(--white);
 }
 
 .site-nav {
@@ -81,7 +82,7 @@ img {
 
 .site-nav a {
   text-decoration: none;
-  color: var(--text);
+  color: var(--white);
   font-weight: 500;
   position: relative;
 }
@@ -93,7 +94,7 @@ img {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--accent);
+  background: var(--accent-dark);
   transition: width 0.3s ease;
 }
 
@@ -114,7 +115,7 @@ img {
 .cta-button {
   background: var(--accent);
   color: var(--white);
-  box-shadow: 0 10px 20px rgba(201, 160, 108, 0.35);
+  box-shadow: 0 10px 20px rgba(0, 102, 255, 0.35);
 }
 
 .secondary-button {
@@ -126,6 +127,21 @@ img {
 .secondary-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.cta-button:hover {
+  background: var(--accent-dark);
+}
+
+.site-header .cta-button {
+  background: var(--white);
+  color: var(--accent);
+  box-shadow: none;
+}
+
+.site-header .cta-button:hover {
+  background: var(--accent-dark);
+  color: var(--white);
 }
 
 .hero {
